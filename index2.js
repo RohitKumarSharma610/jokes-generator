@@ -61,9 +61,10 @@ const jokes = [
 let currentJokeIndex = 0;
 
 function changeJoke() {
-    currentJokeIndex = (currentJokeIndex + 1) % jokes.length; // सही तरीके से इंडेक्स बढ़ाएं
-    document.getElementById('screen').innerText = jokes[currentJokeIndex]; // नया जोक दिखाएं
+    currentJokeIndex = (currentJokeIndex + 1) % jokes.length; 
+    document.getElementById('screen').innerText = jokes[currentJokeIndex]; 
 }
-
-// बटन पर क्लिक इवेंट लिसनर जोड़ें
+function button(){
+    document.getElementById("jokeButton").innerHTML = "Jokes😂";
+}
 document.getElementById('jokeButton').addEventListener('click', changeJoke);
